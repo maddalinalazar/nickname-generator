@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nickname generator</title>
+		<link rel="stylesheet" type="text/css" href="./static/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="./static/css/nickname-generator.css">
+		<script type="text/javascript" src="./static/js/jquery-2.2.3.min.js"></script>
+	</head>
+	<body>
+		<div class="generator-container">
+			<div class="generator-content">
+				<div class="generator-title-wrapper">
+					<h1 class="generator-title">The nickname</h1>
+					<h1 class="generator-title emphasize"> generator</span></h1>
+				</div>
+				
+				<div class="generator-options"> <!--todo this should be renamed to generator-options-wrapper-->
+					<!-- <p class="description-separator">Choose one of the nickname generators below:</p> -->
+					<label for="generator-nickname-type" id="generator-nickname-type-label">Choose one of the nickname generators below: </label>
+						<select name="nicknames-type" id="generator-nickname-type" >
+							<option value="anime" selected>Anime</option> 
+							<option value="cat">Cat</option>
+							<option value="hipster">Hipster</option>
+							<option value="superhero">Superhero</option>
+							<option value="villain">Villain</option>
+						</select>
+					</label>
+							<div class="generator-options-wrapper">
+								
+								<label for="generator-anime">
+									Requested details:
+
+									<div class="generator-nickname-fields anime">	
+										<input type="text" class="generator-field" id="generator-anime-first-name" placeholder="First Name">
+										<input type="text" class="generator-field" id="generator-anime-surname" placeholder="Surname">
+									</div>
+
+									<div class="generator-nickname-fields hipster hidden">	
+										<input type="text" class="generator-field" id="generator-hipster-first-name" placeholder="First Name">
+										<input type="text" class="generator-field" id="generator-hipster-surname" placeholder="Surname">
+									</div>
+
+									<div class="generator-nickname-fields cat hidden">	
+										<input type="tel" class="generator-field" id="generator-cat-phone-number" placeholder="Phone Number">
+
+										<label for="generator-cat-zodiac">Choose your zodiac sign: </label>
+										<select name="cat-zodiac" id="generator-cat-zodiac" >
+											<option value="aries" selected>Aries</option> 
+											<option value="taurus">Taurus</option>
+											<option value="gemini">Gemini</option>
+											<option value="cancer">Cancer</option>
+											<option value="leo">Leo</option>
+											<option value="virgo">Virgo</option>
+											<option value="libra">Libra</option>
+											<option value="scorpion">Scorpion</option>
+											<option value="sagitarius">Sagitarius</option>
+											<option value="capricorn">Capricorn</option>
+											<option value="aquarius">Aquarius</option>
+											<option value="pisces">Pisces</option>
+										</select>
+
+										<label for="generator-cat-color">Choose your favorite color: </label>
+										<select name="cat-color" id="generator-cat-color" >
+											<option value="red" class="red" selected>Red</option> 
+											<option value="orange" class="orange">Orange</option>
+											<option value="yellow" class="yellow">Yellow</option>
+											<option value="green" class="green">Green</option>
+											<option value="blue" class="blue">Blue</option>
+											<option value="white" class="while">White</option>
+											<option value="pink" class="pink">Pink</option>
+											<option value="purple" class="purple">Purple</option>
+										</select>
+									</div>
+
+									<div class="generator-nickname-fields superhero hidden">	
+										<input type="text" class="generator-field" id="generator-superhero-first-name" placeholder="First Name">
+										<input type="text" class="generator-field" id="generator-superhero-surname" placeholder="Surname">
+									</div>
+
+									<div class="generator-nickname-fields villain hidden">	
+										<input type="text" class="generator-field" id="generator-villain-first-name" placeholder="First Name">
+										<input type="text" class="generator-field" id="generator-villain-surname" placeholder="Surname">
+									</div>
+
+								</label>
+							</div>
+
+							<input type="submit" value="Submit" class="generator-submit" id="generator-nickname-submit">	
+
+						<p id="generator-nickname-value-wrapper" class="hidden">
+							Your designated nickname is: 
+							<span id="generator-nickname-value"></span>
+						</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./static/js/nickname-generator.js"></script>
+	</body>
+</html>
